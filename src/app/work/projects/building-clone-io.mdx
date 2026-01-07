@@ -1,0 +1,115 @@
+---
+title: "Building Clone IO"
+publishedAt: "2026-01-07"
+summary: "A full-stack AI-powered platform that enables users to create, clone, and customize websites using natural language prompts, featuring real-time preview and in-browser code execution."
+images:
+  - "/images/projects/clone-io/dashboard.png"
+  - "/images/projects/clone-io/img-1.png"
+  - "/images/projects/clone-io/img-2.png"
+  - "/images/projects/clone-io/clone-io-demo.mp4"
+team:
+  - name: "Piyush Jain"
+    role: "Software Engineer"
+    avatar: "/images/avatar.jpeg"
+    linkedIn: "https://www.linkedin.com/in/piyush-jain-2005-/"
+---
+## What is Clone IO?
+
+Clone IO is an innovative web development platform that bridges the gap between ideas and implementation. Users can describe a website they want to build—or provide a URL to clone—and the platform generates a fully functional, production-ready web application in real-time.
+
+Think of it as having an AI development partner that not only writes the code but also provides an instant live preview, letting you see and modify your project as it's being created.
+
+**Live Demo**: [Clone IO](https://clone-io.vercel.app)  
+**GitHub**: [Repository](https://github.com/whyismeleige/clone-io)
+
+## Core Capabilities
+
+## Natural Language to Code
+1. Describe any website concept in plain English
+2. Provide a URL to clone an existing site's design and structure
+3. Generate complete project scaffolds including React components, configuration files, and dependencies
+4. Powered by Claude AI (Anthropic) for intelligent code generation
+
+### Real-Time Development Environment
+1. **In-Browser Execution**: Runs a complete Node.js environment using WebContainer technology—no server needed
+2. **Live Preview**: See changes instantly as the AI generates code
+3. **Monaco Editor**: Professional-grade code editor with syntax highlighting and IntelliSense
+4. **File Management**: Full file tree with create, edit, and search capabilities
+
+### Collaboration & Deployment
+1. OAuth authentication (Google, GitHub)
+2. Save and manage multiple projects
+3. Public/private project visibility
+4. Export projects as ZIP files
+5. Project starring and organization
+
+## Technical Architecture
+
+### Frontend Stack
+1. **Next.js 14** with App Router for modern React development
+2. **TypeScript** for type-safe code
+3. **Tailwind CSS** with custom design system
+4. **Redux Toolkit** for state management
+5. **WebContainer API** for in-browser code execution
+6. **Monaco Editor** for code editing
+
+### Backend Stack
+1. **Express.js** API server
+2. **MongoDB** for data persistence
+3. **Redis** for session caching
+4. **AWS S3** for project file storage
+5. **Anthropic Claude API** for AI code generation
+6. **Passport.js** for OAuth authentication
+
+## How It Works
+
+1. **User Input**: User describes their desired website or provides a URL to clone
+2. **AI Processing**: Claude AI analyzes the prompt and generates a project structure
+3. **Streaming Response**: Code is streamed back in real-time with progress indicators
+4. **WebContainer Setup**: Files are mounted in an in-browser Node.js environment
+5. **Live Preview**: A dev server starts automatically, showing the working application
+6. **Iteration**: Users can chat with the AI to modify and refine their project
+
+## Key Challenges Solved
+
+### In-Browser Execution
+Implementing WebContainer to run Node.js entirely in the browser was complex but enables instant previews without server costs or latency.
+
+### Real-Time Streaming
+Built a custom XML parser to process Claude's streaming responses incrementally, providing live feedback as code generates.
+
+### File System Management
+Created a hierarchical file structure that syncs between the UI, WebContainer, and S3 storage, maintaining consistency across all layers.
+
+### State Management
+Orchestrated complex state between authentication, chat history, file systems, and live preview using Redux and React Context.
+
+## User Experience Highlights
+
+1. **Zero Configuration**: Start building immediately—no environment setup required
+2. **Visual Feedback**: Progress indicators show each step as files are created and dependencies install
+3. **Responsive Design**: Full mobile support for browsing projects (editing optimized for desktop)
+4. **Device Preview**: Test designs in desktop, tablet, and mobile viewports
+5. **Public Gallery**: Browse and learn from community projects
+
+## Security & Performance
+
+1. JWT-based authentication with refresh tokens
+2. Rate limiting on AI API calls
+3. Redis caching for session data
+4. CDN delivery for project assets
+5. Soft delete for data retention
+6. Environment-based API token limits
+
+## Future Enhancements
+
+1. GitHub integration for direct repository creation
+2. One-click deployment to Vercel/Netlify
+3. Collaborative editing features
+4. Template marketplace
+5. Version control integration
+6. AI model selection (multiple providers)
+
+## Outcome
+
+Clone IO demonstrates the potential of AI-assisted development tools. It lowers the barrier to web development while maintaining professional code quality. The platform has successfully generated dozens of production-ready projects ranging from portfolios to SaaS landing pages to interactive games.
