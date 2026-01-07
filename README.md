@@ -1,4 +1,4 @@
-# Portfolio
+# Piyush Builds Portfolio
 
 A modern, minimalist portfolio website built with Next.js and TypeScript.
 
@@ -18,3 +18,4 @@ A modern, minimalist portfolio website built with Next.js and TypeScript.
 - **Deployment**: Vercel
 
 Built with ❤️ by Piyush Jain 
+
