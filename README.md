@@ -17,5 +17,4 @@ A modern, minimalist portfolio website built with Next.js and TypeScript.
 - **Content**: MDX
 - **Deployment**: Vercel
 
-
-Built with ❤️ by [Your Name]
+Built with ❤️ by Piyush Jain 
